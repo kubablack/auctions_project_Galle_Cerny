@@ -1,0 +1,1 @@
+# tady bude vše co zpracovává data do finální podoby
