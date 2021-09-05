@@ -5,7 +5,6 @@ from descartes import PolygonPatch
 import shapefile
 import math
 import matplotlib.pyplot as plt
-import matplotlib.cm as cm
 auctions = pd.read_csv("auctionslist.csv")
 sf=shapefile.Reader('districts')
 reg = [['Hlavní město Praha', ['Praha']],
