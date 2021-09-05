@@ -167,3 +167,40 @@ plt.title("Average estimated price of subject of auction by district",fontsize="
 plt.legend(['The lighter a district is, the more auctions are there'])
 plt.show()
 
+<<<<<<< HEAD
+=======
+fig = plt.figure(figsize=(12,12)) 
+ax = fig.gca()
+
+for i in range(len(down.regions_and_districts)):
+    for j in range(startindices[i]-1,endindices[i]):
+        shade=int(countlist[i]/max(countlist)//0.01)#making integers to put in colour codes
+        if shade>9:fillcolour="#{}{}{}".format(shade,shade,shade)
+        else:fillcolour="#0{}0{}0{}".format(shade,shade,shade)#one-digit numbers would not work in the code
+        poly=sf.shape(j).__geo_interface__
+        ax.add_patch(PolygonPatch(poly, fc=fillcolour, ec='#000000', alpha=1, zorder=2 ))
+ax.axis('scaled')
+plt.axis('off')
+plt.title("Amount of auctions by region",fontsize="20")
+plt.legend(['The lighter a district is, the more auctions are there'])
+plt.show()#The lighter the colour, the more auctions there are. The region with most auctions always has shade #999999,
+#other regions are coloured by their share of auctions: 10% of maximum has shade #101010, 52% has shade #525252 etc.
+
+fig = plt.figure(figsize=(12,12)) 
+ax = fig.gca()
+
+for i in range(len(down.regions_and_districts)):
+    for j in range(startindices[i]-1,endindices[i]):
+        shade=int(avglist[i]/max(avglist)//0.01)
+        if shade>9:fillcolour="#00{}00".format(shade)
+        else:fillcolour="#000{}00".format(shade)
+        poly=sf.shape(j).__geo_interface__
+        ax.add_patch(PolygonPatch(poly, fc=fillcolour, ec='#000000', alpha=1, zorder=2 ))
+ax.axis('scaled')
+plt.axis('off')
+plt.title("Average estimated price of subject of auction by region",fontsize="20")
+plt.legend(['The lighter a district is, the more auctions are there'])
+plt.show()#The lighter the colour, the more expensive auctions on average there are. Coloured by share of maximum like before. 
+
+
+>>>>>>> 53d5e5a073bfa860f4a1445d669f8c234a85c996
