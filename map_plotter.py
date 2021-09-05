@@ -138,3 +138,4 @@ plt.title("Average estimated price of subject of auction by region",fontsize="20
 plt.legend(['The lighter a district is, the more auctions are there'])
 plt.show()#The lighter the colour, the more expensive auctions on average there are. Coloured by share of maximum like before. 
 
+
