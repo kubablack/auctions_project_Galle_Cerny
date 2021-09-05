@@ -3,7 +3,7 @@
 # <center>Auctions</center>
 #### <center>Antonín Galle, Jakub Černý</center>
 
-This project works with data from https://www.portaldrazeb.cz and its goal is to scrape actual data about future auctions, process them into suitable format and provide insights for potential bidders. It incorporates three parts: a scraper, a processor and an explorer/filter. Every part has its own description in the main jupyter notebook **auction.ipynb** and also within corresponding *.py* files. 
+This project works with data from https://www.portaldrazeb.cz and its goal is to scrape actual data about future auctions, process them into suitable format and provide insights for potential bidders. It incorporates three parts: a scraper, a processor and an explorer/filter. Every part has its own description in the main jupyter notebook **auctions.ipynb** and also within corresponding *.py* files. 
 
 The scraper and the processor are written in form of OOP and particular classes are then imported from respective scripts. The last part is not designed as OOP, it is only written in separate scripts and then executed in the main file using *%run*. 
 
